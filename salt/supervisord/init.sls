@@ -1,9 +1,7 @@
 supervisor:
   pkg:
     - installed
-
-wsgi_server:
-  supervisord:
+  service:
     - running
     - restart: False
     - require:
@@ -14,4 +12,4 @@ wsgi_server:
     - user: root
     - group: root
     - chmod: 644
-    - source: salt://supervisor/omniserver.conf
+    - source: salt://supervisord/omniserver.conf
