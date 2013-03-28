@@ -11,6 +11,10 @@ postgresql:
     - require:
         - pkg: postgresql 
 
+libpq-dev:
+  pkg:
+    - installed
+
 omniserver:
   postgres_user.present:
     - createdb: True
