@@ -20,3 +20,9 @@ omniserver:
     - createdb: True
     - password: omnipass
     - runas: postgres
+
+omniserver_db:
+  postgres_database.present:
+    - owner: omniserver
+    - encoding: UNICODE
+    - runas: postgres
