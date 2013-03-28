@@ -25,4 +25,5 @@ omniserver_db:
   postgres_database.present:
     - owner: omniserver
     - encoding: UNICODE
+    - template: template0
     - runas: postgres
